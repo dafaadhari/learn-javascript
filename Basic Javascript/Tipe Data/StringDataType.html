@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Example</title>
+</head>
+<body>
+    <h1>Contoh Penggunaan Tipe Data String dalam JavaScript</h1>
+    <p id="string-result"></p>
+
+    <script>
+        // Mendefinisikan variabel string
+        var greeting = "Hello";
+        var name = "World";
+        var combinedString = greeting + ", " + name + "!";
+
+        // Fungsi untuk menampilkan hasil gabungan string
+        function displayString() {
+            document.getElementById('string-result').innerText = combinedString;
+        }
+
+        // Memanggil fungsi untuk menampilkan hasil
+        displayString();
+    </script>
+</body>
+</html>

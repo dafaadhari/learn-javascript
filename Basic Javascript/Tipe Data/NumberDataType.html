@@ -3,15 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tipe Data Number</title>
+    <title>Number Example</title>
 </head>
 <body>
-    <script>
-        
-        document.writeln(12);
-        document.writeln("</br>");
-        document.writeln(12.2);
+    <h1>Contoh Penggunaan Tipe Data Number dalam JavaScript</h1>
+    <p id="number-result"></p>
 
+    <script>
+        // Mendefinisikan variabel number
+        var num1 = 10;
+        var num2 = 20;
+        var result = num1 + num2;
+
+        // Fungsi untuk menampilkan hasil operasi number
+        function displayResult() {
+            document.getElementById('number-result').innerText = 
+                "Hasil penjumlahan " + num1 + " dan " + num2 + " adalah: " + result;
+        }
+
+        // Memanggil fungsi untuk menampilkan hasil
+        displayResult();
     </script>
 </body>
 </html>

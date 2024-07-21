@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean Example</title>
+</head>
+<body>
+    <h1>Contoh Penggunaan Tipe Data Boolean dalam JavaScript</h1>
+    <p id="js-status"></p>
+    <p id="homework-status"></p>
+
+    <script>
+        // Mendefinisikan variabel boolean
+        var isJavaScriptFun = true;
+        var isHomeworkDone = false;
+
+        // Fungsi sederhana yang menggunakan boolean
+        function checkJavaScriptFun() {
+            if (isJavaScriptFun) {
+                document.getElementById('js-status').innerText = "JavaScript itu menyenangkan!";
+            } else {
+                document.getElementById('js-status').innerText = "JavaScript itu tidak menyenangkan.";
+            }
+        }
+
+        function checkHomeworkStatus() {
+            if (isHomeworkDone) {
+                document.getElementById('homework-status').innerText = "Pekerjaan rumah selesai.";
+            } else {
+                document.getElementById('homework-status').innerText = "Pekerjaan rumah belum selesai.";
+            }
+        }
+
+        // Memanggil fungsi untuk memeriksa nilai boolean
+        checkJavaScriptFun();
+        checkHomeworkStatus();
+
+        // Mengubah nilai boolean
+        isJavaScriptFun = false;
+        isHomeworkDone = true;
+
+        // Memanggil fungsi lagi untuk melihat perubahan
+        setTimeout(function() {
+            checkJavaScriptFun();
+            checkHomeworkStatus();
+        }, 3000); // Menunda perubahan selama 3 detik
+    </script>
+</body>
+</html>
