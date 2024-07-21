@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operasi Aritmatik di JavaScript</title>
+    <script>
+        function showArithmeticResults() {
+            // Deklarasi variabel
+            let a = 10;
+            let b = 5;
+
+            // Penjumlahan
+            let sum = a + b;
+            document.getElementById('sum').innerText = "Penjumlahan: " + sum;
+
+            // Pengurangan
+            let difference = a - b;
+            document.getElementById('difference').innerText = "Pengurangan: " + difference;
+
+            // Perkalian
+            let product = a * b;
+            document.getElementById('product').innerText = "Perkalian: " + product;
+
+            // Pembagian
+            let quotient = a / b;
+            document.getElementById('quotient').innerText = "Pembagian: " + quotient;
+
+            // Modulus (sisa bagi)
+            let remainder = a % b;
+            document.getElementById('remainder').innerText = "Modulus: " + remainder;
+
+            // Eksponen (pangkat)
+            let exponent = a ** b;
+            document.getElementById('exponent').innerText = "Eksponen: " + exponent;
+
+            // Increment
+            a++;
+            document.getElementById('increment').innerText = "Increment: " + a;
+
+            // Decrement
+            b--;
+            document.getElementById('decrement').innerText = "Decrement: " + b;
+        }
+    </script>
+</head>
+<body onload="showArithmeticResults()">
+    <h1>Operasi Aritmatik di JavaScript</h1>
+    <p id="sum"></p>
+    <p id="difference"></p>
+    <p id="product"></p>
+    <p id="quotient"></p>
+    <p id="remainder"></p>
+    <p id="exponent"></p>
+    <p id="increment"></p>
+    <p id="decrement"></p>
+</body>
+</html>
