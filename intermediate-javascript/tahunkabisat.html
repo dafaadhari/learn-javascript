@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leap Year Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Leap Year Checker</h1>
+        <form id="leapYearForm">
+            <label for="yearInput">Masukkan tahun:</label>
+            <input type="text" id="yearInput" name="yearInput" required>
+            <button type="submit">Cek</button>
+        </form>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function isLeapYear(year) {
+            // Tahun kabisat adalah tahun yang habis dibagi 4
+            // Kecuali tahun yang habis dibagi 100, tapi tidak habis dibagi 400
+            if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        document.getElementById('leapYearForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Mencegah form dari submit default
+
+            const yearInput = document.getElementById('yearInput').value.trim();
+            const resultDiv = document.getElementById('result');
+
+            if (yearInput === '' || isNaN(yearInput)) {
+                resultDiv.textContent = 'Masukkan tahun yang valid.';
+                return;
+            }
+
+            const year = parseInt(yearInput, 10);
+
+            if (isLeapYear(year)) {
+                resultDiv.textContent = year + ' adalah tahun kabisat.';
+            } else {
+                resultDiv.textContent = year + ' bukan tahun kabisat.';
+            }
+        });
+    </script>
+</body>
+</html>
